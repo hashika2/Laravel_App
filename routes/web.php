@@ -1,4 +1,5 @@
 <?php
+use App\Task;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tasks',function(){
-    return view('task');
+Route::get('/tasks', function () {
+    $data=App\Task::all();
+    $task = new Task;
+    $data = $task->all();
+    return view('tasks')->with('tasks',$data);
 });
+
+Route::post('/saveTask','Taskcontroller@store');
+
+Route::get('/markascompleted/{id}','Taskcontroller@UpdateAsCompleted');
+
+Route::get('/markasnotcompleted/{id}','Taskcontroller@UpdateAsNotCompleted');
+
+Route::get('/deletetask/{id}','Taskcontroller@DeleteTask');
+
+Route::get('/updatetask/{id}','Taskcontroller@updateTask');
+
+Route::get('updatenewtask','Taskcontroller@updatenewtask');
