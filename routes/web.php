@@ -33,4 +33,4 @@ Route::get('/deletetask/{id}','Taskcontroller@DeleteTask');
 
 Route::get('/updatetask/{id}','Taskcontroller@updateTask');
 
-Route::get('/updatenewtask','Taskcontroller@updatenewtask');
+Route::post('/updatenewtask','Taskcontroller@updatenewtask');

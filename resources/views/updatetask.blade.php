@@ -11,10 +11,10 @@
 <body>
 <div class="container">
 <br><br>
-<form action="/updatenewtask" method="get">
+<form action="/updatenewtask" method="post">
         {{csrf_field()}}
     <input type="text" class="form-control" name="task" value="{{$taskdata->task}}">
-    <input type="hidden" namae="id" value="{{$taskdata->id}}">
+    <input type="hidden" name="id" value="{{$taskdata->id}}">
     <input type="submit" class="btn btn-warning" value="Update">
     &nbsp;&nbsp; <input type="submit " class="btn btn-danger" value="Cancel"> 
 </form>
