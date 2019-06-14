@@ -38,13 +38,13 @@
                                     <td>{{$task->id}}</td>
                                     <td>{{$task->task}}</td>
                                     <td>
-                                    @if($task->iscompleted){
+                                    @if($task->iscompleted)
                                         <button class="btn btn-success">Completed</button>
 
-                                    }
-                                    @else{
+                                    
+                                    @else
                                         <button class="btn btn-warning">Not Completed</button>
-                                    }
+                                    
                                     @endif
                                     </td>
                                     <td>

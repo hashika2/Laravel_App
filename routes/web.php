@@ -1,5 +1,5 @@
 <?php
-use App\Task;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +18,8 @@ Route::get('/', function () {
 
 Route::get('/tasks', function () {
     $data=App\Task::all();
-    $task = new Task;
-    $data = $task->all();
+    //dd($data);
+   
     return view('tasks')->with('tasks',$data);
 });
 

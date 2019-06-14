@@ -57,7 +57,7 @@ class Taskcontroller extends Controller
         $data->task=$task;
         $data->save();
         $datas=Task::all();
-        return view('tasks')->with('task',$datas);
+        return redirect('tasks')->with('tasks',$datas);
 
     }
 

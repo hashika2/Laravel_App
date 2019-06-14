@@ -13,7 +13,9 @@
 <br><br>
 <form action="/updatenewtask" method="post">
         {{csrf_field()}}
+        <br><br><br><br>
     <input type="text" class="form-control" name="task" value="{{$taskdata->task}}">
+    <br>
     <input type="hidden" name="id" value="{{$taskdata->id}}">
     <input type="submit" class="btn btn-warning" value="Update">
     &nbsp;&nbsp; <input type="submit " class="btn btn-danger" value="Cancel"> 
